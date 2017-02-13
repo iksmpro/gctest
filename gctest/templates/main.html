@@ -1,0 +1,9 @@
+{%if has_menu%}
+<ul>
+{%with item=tree_elems%} 
+    {%include "recursive_template.html" %}
+{%endwith%}
+</ul>
+{% else %}
+<p>Menu {{tree_elems}} does not exist</p>
+{%endif%}

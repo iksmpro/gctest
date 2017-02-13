@@ -1,0 +1,11 @@
+<li> <a href='{{item.link}}'>{{item.name}}</a> 
+    {%if item.has_children %}
+        <ul>
+         {%for child in item.children %}
+              {%with item=child %}
+                   {%include "recursive_template.html"%}
+              {%endwith%}
+         {%endfor%}
+         </ul>
+    {%endif%}
+</li>
